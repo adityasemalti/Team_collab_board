@@ -11,7 +11,6 @@ const TaskDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Form state for editing task, including status
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -34,7 +33,7 @@ const TaskDetails = () => {
           priority: data.priority || 'Low',
           assignedTo: data.assignedTo || '',
           dueDate: data.dueDate ? data.dueDate.slice(0, 10) : '',
-          status: data.status || 'Todo', // status set here
+          status: data.status || 'Todo', 
         });
         setLoading(false);
       } catch (err) {
@@ -46,13 +45,11 @@ const TaskDetails = () => {
     fetchTask();
   }, [id, getTaskById]);
 
-  // Update form state on input/select change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  // Handle update submit, sends whole formData including status
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
@@ -64,7 +61,6 @@ const TaskDetails = () => {
     }
   };
 
-  // Handle delete task
   const handleDelete = async () => {
     if (window.confirm('Are you sure you want to delete this task?')) {
       try {
