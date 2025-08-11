@@ -53,7 +53,6 @@ const Home = () => {
     e.preventDefault();
     if (!taskData.title.trim()) return;
 
-    // Yahan boardId body me mat bhejna, backend me URL param me hai already
     await createTask(taskData);
 
     setTaskData({
@@ -86,7 +85,6 @@ const Home = () => {
   const inProgressTasks = tasks.filter((task) => task.status === 'In Progress');
   const completeTasks = tasks.filter((task) => task.status === 'Complete');
 
-  // Reusable Task Card
   const TaskCard = ({ task }) => (
     <div
       className="bg-gray-800 p-4 rounded-md shadow mb-4 cursor-pointer hover:bg-gray-700 transition"
