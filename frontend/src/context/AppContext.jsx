@@ -4,7 +4,7 @@ import axios from 'axios';
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-    const backendUrl = 'http://localhost:3000';
+    const backendUrl = 'https://team-collab-boardback.vercel.app';
     const [boards, setBoards] = useState([]);
     const [currentBoard, setCurrentBoard] = useState(localStorage.getItem('currentBoard') || null);
     const [showForm, setShowForm] = useState(false);
