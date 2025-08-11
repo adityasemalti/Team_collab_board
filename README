@@ -1,0 +1,3 @@
+Hi this is a Team collaboration system that is used to manage the tasks given to the employees. The access is only with the Admin, he is able to create, delete, assign new tasks to the employees.
+I have used only fundumnetal technologies to make as simple as possible. It would have become more better using some animation stuff and other technologies. The frontend is buikt using react.js while the backend is built using 
+node.js and express.js. MongoDB atlas has been used to mange the database. It does not contain any AI written Code.
